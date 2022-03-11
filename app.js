@@ -9,8 +9,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
 
 //connecting mongoDB
-const dbURI = 'mongodb+srv://abs1289:abs%401289@cluster0.fhm2u.mongodb.net/node-tuts?retryWrites=true&w=majority';
-mongoose.connect(dbURI,{useNewUrlParser: true, useUnifiedTopology : true}).then(console.log("connected to db")).catch((err)=>console.log(err));
+// const dbURI = 'mongoDB cluster string needed';
+mongoose.connect(dbURI,{useNewUrlParser: true, useUnifiedTopology : true}).then(console.log("connected to db")).catch((err)=>console.log(err + '\n mongoDB cluster string needed'));
 const userSchema = {
     fullname: String,
     cityname: String,
